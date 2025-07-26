@@ -3,16 +3,16 @@ import '../styles/global.css';
 import Navigation from '../components/Navigation.astro';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
-const pageTitle = "About Me";
+const pageTitle = 'About Me';
 
 const identity = {
-  firstName: "Sarah",
-  country: "Canada",
-  occupation: "Technical Writer",
-  hobbies: ["photography", "birdwatching", "baseball"],
+  firstName: 'Sarah',
+  country: 'Canada',
+  occupation: 'Technical Writer',
+  hobbies: ['photography', 'birdwatching', 'baseball'],
 };
 
-const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"];
+const skills = ['HTML', 'CSS', 'JavaScript', 'React', 'Astro', 'Writing Docs'];
 
 const happy = true;
 const finished = false;
@@ -28,7 +28,7 @@ const skillColor = 'navy';
   <meta name="viewport" content="width=device-width"/>
   <meta name="generator" content={Astro.generator}/>
   <title>{pageTitle}</title>
-  <style define:vars={{skillColor}}>
+  <style define:vars={{ skillColor }}>
     h1 {
       color: purple;
       font-size: 4rem;
@@ -43,7 +43,7 @@ const skillColor = 'navy';
 
 </head>
 <body>
-<Header />
+<Header/>
 
 <h1>{pageTitle}</h1>
 <h2>... and my new Astro site!</h2>
@@ -63,7 +63,8 @@ const skillColor = 'navy';
 
 <p>My skills are:</p>
 <ul>
-  {skills.map((skill) => <li class="skill">{skill}</li>)}
+  {skills.map((skill) =>
+      <li class="skill">{skill}</li>)}
 </ul>
 
 {happy && <p>I am happy to be learning Astro!</p>}
@@ -72,6 +73,9 @@ const skillColor = 'navy';
 
 {goal === 3 ? <p>My goal is to finish in 3 days.</p> : <p>My goal is not 3 days.</p>}
 
-<Footer />
+<Footer/>
+<script>
+  import '../scripts/menu.js';
+</script>
 </body>
 </html>
